@@ -67,8 +67,8 @@
             // Fetch available dates/collections
             useEffect(function () {
                 if (baseUrl && proxyUrl) {
-                    // Fetch dates via proxy
-                    fetch(proxyUrl + '/dates', {
+                    // Fetch dates via proxy with cache-busting parameter
+                    fetch(proxyUrl + '/dates?nocache=' + Date.now(), {
                         headers: {
                             'X-WP-Nonce': galleryWidgetConfig.nonce
                         }
@@ -97,8 +97,8 @@
                             setDates([]);
                         });
 
-                    // Fetch collections via proxy
-                    fetch(proxyUrl + '/collections', {
+                    // Fetch collections via proxy with cache-busting parameter
+                    fetch(proxyUrl + '/collections?nocache=' + Date.now(), {
                         headers: {
                             'X-WP-Nonce': galleryWidgetConfig.nonce
                         }
