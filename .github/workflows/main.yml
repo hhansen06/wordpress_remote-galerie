@@ -19,7 +19,7 @@ jobs:
         id: version
         run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
       
-       - name: Create plugin directory structure
+      - name: Create plugin directory structure
         run: |
           mkdir -p h2-remote-galerie
           cp * h2-remote-galerie     
