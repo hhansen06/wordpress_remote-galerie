@@ -1,0 +1,227 @@
+.wp-block-gallery-widget-gallery {
+    margin: 2em 0;
+}
+
+.gallery-widget-container {
+    width: 100%;
+}
+
+.gallery-widget-grid {
+    display: grid;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.gallery-widget-grid.columns-1 {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.gallery-widget-grid.columns-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.gallery-widget-grid.columns-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery-widget-grid.columns-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.gallery-widget-grid.columns-5 {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.gallery-widget-grid.columns-6 {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.gallery-widget-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #f0f0f1;
+    aspect-ratio: 1;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.gallery-widget-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-widget-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-widget-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-widget-title {
+    margin: 0 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e0e0e0;
+    color: #1e1e1e;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.gallery-widget-loading {
+    text-align: center;
+    padding: 40px;
+    color: #757575;
+    font-size: 1.1em;
+}
+
+.gallery-widget-error {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 16px;
+    border-radius: 4px;
+    border: 1px solid #f5c6cb;
+    text-align: center;
+}
+
+.gallery-widget-empty {
+    text-align: center;
+    padding: 40px;
+    color: #757575;
+    background: #f0f0f1;
+    border-radius: 4px;
+}
+
+/* Lightbox styles */
+.gallery-widget-lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-widget-lightbox.active {
+    display: flex;
+}
+
+.gallery-widget-lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-widget-lightbox img {
+    max-width: 100%;
+    max-height: 90vh;
+    display: block;
+    border-radius: 4px;
+}
+
+.gallery-widget-lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1;
+    color: #1e1e1e;
+    z-index: 10001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-widget-lightbox-close:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+}
+
+.gallery-widget-lightbox-prev,
+.gallery-widget-lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 32px;
+    font-weight: 200;
+    line-height: 1;
+    color: #1e1e1e;
+    z-index: 10001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-widget-lightbox-prev:hover,
+.gallery-widget-lightbox-next:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-50%) scale(1.05);
+}
+
+.gallery-widget-lightbox-prev {
+    left: 20px;
+}
+
+.gallery-widget-lightbox-next {
+    right: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .gallery-widget-grid.columns-4,
+    .gallery-widget-grid.columns-5,
+    .gallery-widget-grid.columns-6 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-widget-lightbox-prev {
+        left: 10px;
+    }
+
+    .gallery-widget-lightbox-next {
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-widget-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .gallery-widget-lightbox-close {
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+    }
+}
