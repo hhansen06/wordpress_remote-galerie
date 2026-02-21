@@ -1,0 +1,54 @@
+.gallery-widget-editor {
+    padding: 40px;
+    text-align: center;
+    background: #f0f0f1;
+    border: 2px dashed #8c8f94;
+    border-radius: 4px;
+}
+
+.gallery-widget-editor .gallery-widget-icon {
+    font-size: 48px;
+    color: #2271b1;
+    margin-bottom: 16px;
+}
+
+.gallery-widget-editor .gallery-widget-icon .dashicons {
+    width: 48px;
+    height: 48px;
+    font-size: 48px;
+}
+
+.gallery-widget-editor h3 {
+    margin: 0 0 16px;
+    color: #1e1e1e;
+}
+
+.gallery-widget-editor p {
+    margin: 0;
+    color: #757575;
+}
+
+.gallery-widget-notice {
+    background: #fff3cd;
+    color: #856404;
+    padding: 12px;
+    border-radius: 4px;
+    margin-top: 16px;
+}
+
+.gallery-widget-selection {
+    text-align: left;
+    background: white;
+    padding: 16px;
+    border-radius: 4px;
+    margin-top: 16px;
+}
+
+.gallery-widget-selection ul {
+    margin: 8px 0 0 0;
+    padding-left: 20px;
+}
+
+.gallery-widget-selection li {
+    margin: 4px 0;
+}
