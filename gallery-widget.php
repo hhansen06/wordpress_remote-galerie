@@ -1,10 +1,9 @@
 <?php
 /**
  * Plugin Name: MediaHUB Gallerie
- * Plugin URI: https://example.com/gallery-widget
  * Description: Ein Galerie-Plugin mit REST-API-Integration für Beiträge
  * Version: 1.0.0
- * Author: Your Name
+ * Author: Henrik Hansen
  * License: GPL v2 or later
  * Text Domain: gallery-widget
  */
