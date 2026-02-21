@@ -19,9 +19,14 @@ jobs:
         id: version
         run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
       
+       - name: Create plugin directory structure
+        run: |
+          mkdir -p h2-remote-galerie
+          cp * h2-remote-galerie     
+          
       - name: Create ZIP file
         run: |
-          zip -r h2-remote-galerie-${{ steps.version.outputs.VERSION }}.zip * h2-remote-galerie
+          zip -r h2-remote-galerie-${{ steps.version.outputs.VERSION }}.zip h2-remote-galerie/
       
       - name: Upload Release Asset
         env:
