@@ -421,9 +421,12 @@ class Gallery_Widget_Plugin {
         $cache_key = 'gallery_widget_dates';
         $cache_ttl = get_option('gallery_widget_cache_ttl', 7) * 24 * 60 * 60;
         
+        // Skip cache if nocache parameter is present (block editor)
+        $nocache = $request->get_param('nocache');
+        
         // Try to get from cache
         $cached = get_transient($cache_key);
-        if ($cached !== false && !empty($cached)) {
+        if (!$nocache && $cached !== false && !empty($cached)) {
             error_log('Gallery Widget: Serving dates from cache');
             return rest_ensure_response($cached);
         }
@@ -471,9 +474,12 @@ class Gallery_Widget_Plugin {
         $cache_key = 'gallery_widget_collections';
         $cache_ttl = get_option('gallery_widget_cache_ttl', 7) * 24 * 60 * 60;
         
+        // Skip cache if nocache parameter is present (block editor)
+        $nocache = $request->get_param('nocache');
+        
         // Try to get from cache
         $cached = get_transient($cache_key);
-        if ($cached !== false && !empty($cached)) {
+        if (!$nocache && $cached !== false && !empty($cached)) {
             error_log('Gallery Widget: Serving collections from cache');
             return rest_ensure_response($cached);
         }
