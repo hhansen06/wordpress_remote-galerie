@@ -9,7 +9,7 @@ permissions:
     contents: write
 
 env:
-    PLUGIN_SLUG: worspress_remote-galerie
+  PLUGIN_SLUG: wordpress_remote-galerie
     BASE_VERSION: 1.0.0
 
 jobs:
@@ -49,6 +49,9 @@ jobs:
                     --exclude='.git' \
                     --exclude='.github' \
                     --exclude='dist'
+
+                  # Replace version placeholder in packaged plugin files.
+                  perl -pi -e 's/\@version\@/$ENV{VERSION}/ig' "${PACKAGE_DIR}/gallery-widget.php"
 
                   (
                     cd "${BUILD_DIR}"
