@@ -77,6 +77,6 @@ jobs:
               uses: softprops/action-gh-release@v2
               with:
                   tag_name: ${{ env.TAG }}
-                  name: ${{PLUGIN_SLUG}} ${{ env.TAG }}
+                  name: Remote-galerie ${{ env.TAG }}
                   generate_release_notes: true
                   files: ${{ env.ZIP_PATH }}
