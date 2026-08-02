@@ -2,9 +2,9 @@
 /**
  * Plugin Name: MediaHUB Gallerie
  * Description: Ein Galerie-Plugin mit REST-API-Integration für Beiträge
- * Version: 1.0.2
- * Author: Henrik Hansen
- * License: GPL v2 or later
+* Version:  @VERSION@
+ * Author:  Henrik Hansen
+ * License:  GPL-2.0+
  * Text Domain: gallery-widget
  */
 
